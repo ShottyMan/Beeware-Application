@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "Time Controller"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/timecontroller"
+license = "GNU General Public License v3 or later (GPLv3+)"
+author = 'Shotty_Man'
+author_email = "Jyssauco1@gmail.com"
+
+[tool.briefcase.app.timecontroller]
+formal_name = "Time Controller"
+description = "An application to the set activation time for raspberry time actions"
+icon = "src/timecontroller/resources/timecontroller"
+sources = ['src/timecontroller']
+requires = []
+
+
+[tool.briefcase.app.timecontroller.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.timecontroller.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.timecontroller.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.timecontroller.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.timecontroller.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
